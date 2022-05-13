@@ -20,7 +20,7 @@ function App() {
               setCurrentVideo(val);
             }}>
               <div className='image'>
-                <img src={val.imageUrl} />
+                <img alt="title" src={val.imageUrl} />
               </div>
               <div className='title'>
                 <h1>{val.name}</h1>
@@ -44,7 +44,7 @@ function App() {
           <div className='content'>
             <div className='left'>
               <div className='movie-image'>
-                <img src={currentVideo.imageUrl} />
+                <img alt={currentVideo.name} src={currentVideo.imageUrl} />
               </div>
               <div className='cast'>
                 <span>Full Cast (37)</span>
@@ -52,7 +52,7 @@ function App() {
                   {data.map((val) => {
                     return <li key={val.id}>
                       <div className='image'>
-                        <img src={val.imageUrl} />
+                        <img alt={val.name} src={val.imageUrl} />
                       </div>
                       <div className='name'>
                         <h3>Famous Person</h3>
